@@ -1,6 +1,12 @@
-#const WOODIES 19
-#const LAND_BASE 0
 #const LAND_INTERMEDIATE 32
+start_random
+  percent_chance 50
+    #const WOODIES 17
+    #const LAND_BASE 60
+  percent_chance 50
+    #const WOODIES 19
+    #const LAND_BASE 0
+end_random
 
 <PLAYER_SETUP>
 random_placement
