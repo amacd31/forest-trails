@@ -1,24 +1,24 @@
+#const WOODIES 19
+#const LAND_BASE 0
+#const LAND_INTERMEDIATE 32
+
 <PLAYER_SETUP>
 random_placement
 ai_info_map_type BLACK_FOREST 0 0 0
 
 <LAND_GENERATION>
 
-base_terrain GRASS
-
-#const FOREST1 10
-#const FOREST2 20
-
+base_terrain LAND_BASE
 
 create_player_lands
 {
-  terrain_type	                GRASS2
+  terrain_type	                LAND_BASE
   left_border                   5
   right_border                  5
   top_border                    5
   bottom_border                 5
   /*base_size                     11 */
-  number_of_tiles               100
+  number_of_tiles               200
   other_zone_avoidance_distance 15
 }
 
@@ -33,22 +33,30 @@ create_elevation 6 {
 
 <TERRAIN_GENERATION>
 
-create_terrain FOREST1
+create_terrain WOODIES
 {
-	base_terrain GRASS
+	base_terrain LAND_BASE
 	land_percent 50
 	number_of_clumps 500
 	set_avoid_player_start_areas
 	spacing_to_other_terrain_types 3
 }
 
-create_terrain FOREST2
+create_terrain LAND_INTERMEDIATE
 {
-	base_terrain GRASS
+	base_terrain LAND_BASE
 	land_percent 50
 	number_of_clumps 500
 	set_avoid_player_start_areas
 	spacing_to_other_terrain_types 3
+}
+
+create_terrain WOODIES
+{
+	base_terrain LAND_INTERMEDIATE
+	land_percent 50
+	number_of_clumps 1500
+	spacing_to_other_terrain_types 0
 }
 
 <OBJECTS_GENERATION>
@@ -151,7 +159,7 @@ create_object RELIC
 {
    number_of_objects            5
    min_distance_to_players     25
-   terrain_to_place_on 		GRASS
+   terrain_to_place_on 		LAND_BASE
    temp_min_distance_group_placement 50
 }
 
@@ -161,7 +169,7 @@ create_object DEER
   number_of_groups			1
   set_gaia_object_only
   set_place_for_every_player
-  terrain_to_place_on 		GRASS
+  terrain_to_place_on 		LAND_BASE
   temp_min_distance_group_placement 2
   min_distance_to_players		5
   max_distance_to_players		12
@@ -173,7 +181,7 @@ create_object BOAR
   number_of_groups			2
   set_gaia_object_only
   set_place_for_every_player
-  terrain_to_place_on 		GRASS
+  terrain_to_place_on 		LAND_BASE
   temp_min_distance_group_placement 2
   min_distance_to_players		5
   max_distance_to_players		15
@@ -205,7 +213,7 @@ create_object SHEEP
 <CONNECTION_GENERATION>
 
 create_connect_teams_lands {
-    replace_terrain FOREST1 GRASS
+    replace_terrain WOODIES LAND_BASE
     terrain_size 1 1
-    terrain_cost FOREST1 15
+    terrain_cost WOODIES 15
 }
