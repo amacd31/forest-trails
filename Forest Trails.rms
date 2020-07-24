@@ -6,6 +6,7 @@ ai_info_map_type BLACK_FOREST 0 0 0
 
 base_terrain GRASS
 
+#const FOREST1 10
 #const FOREST2 20
 
 
@@ -32,13 +33,13 @@ create_elevation 6 {
 
 <TERRAIN_GENERATION>
 
-create_terrain FOREST
+create_terrain FOREST1
 {
 	base_terrain GRASS
 	land_percent 50
 	number_of_clumps 500
 	set_avoid_player_start_areas
-	spacing_to_other_terrain_types 2
+	spacing_to_other_terrain_types 3
 }
 
 create_terrain FOREST2
@@ -199,11 +200,11 @@ create_object SHEEP
   min_distance_group_placement		4
 }
 
+
 <CONNECTION_GENERATION>
 
 create_connect_teams_lands {
-    replace_terrain JUNGLE GRASS
-    replace_terrain FOREST GRASS
+    replace_terrain FOREST1 GRASS
     terrain_size 1 1
-    terrain_cost 15
+    terrain_cost FOREST1 15
 }
