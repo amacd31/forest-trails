@@ -218,8 +218,8 @@ create_object SHEEP
 
 <CONNECTION_GENERATION>
 
-create_connect_teams_lands {
+create_connect_all_lands {
     replace_terrain WOODIES LAND_BASE
-    terrain_size 1 1
-    terrain_cost WOODIES 15
+    terrain_size 3 1
+    terrain_cost WOODIES 10
 }
