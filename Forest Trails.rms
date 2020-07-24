@@ -151,6 +151,7 @@ create_object RELIC
 {
    number_of_objects            5
    min_distance_to_players     25
+   terrain_to_place_on 		GRASS
    temp_min_distance_group_placement 50
 }
 
