@@ -60,7 +60,7 @@ create_terrain LAND_INTERMEDIATE
 create_terrain WOODIES
 {
 	base_terrain LAND_INTERMEDIATE
-	land_percent 50
+	land_percent 100
 	number_of_clumps 1500
 	spacing_to_other_terrain_types 0
 }
