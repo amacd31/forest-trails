@@ -1,3 +1,9 @@
+/**
+Authored by: Andrew MacDonald
+Website: https://github.com/amacd31/forest-trails
+Source: https://github.com/amacd31/forest-trails/Forest_trails.rms
+*/
+
 #const LAND_INTERMEDIATE 32
 start_random
   percent_chance 50
