@@ -13,6 +13,9 @@ Each player starts with:
   * A clearing for their starting base
   * Lots of trees - leaving small paths around the map and between players
 
+Additionally there are neutral golds in the centre of the map (6 to 12 tiles
+depending on map size).
+
 To use this map copy it into your Age of Empires II `random-map-script` directory.
 With Steam the game directory can be found by right clicking on the game
 title, selecting Properties, going to the `LOCAL FILES` tab, then choosing
