@@ -55,6 +55,15 @@ create_player_lands
   other_zone_avoidance_distance 15
 }
 
+create_land
+{
+    terrain_type NEUTRAL_LAND
+    base_size 1
+    number_of_tiles 100
+    land_position 50 50
+    clumping_factor 99
+}
+
 <ELEVATION_GENERATION>
 
 create_elevation 6 {
@@ -89,6 +98,14 @@ create_terrain WOODIES
 	base_terrain LAND_INTERMEDIATE
 	land_percent 100
 	number_of_clumps 1500
+	spacing_to_other_terrain_types 0
+}
+
+create_terrain WOODIES
+{
+	base_terrain NEUTRAL_LAND
+	number_of_tiles 70
+	number_of_clumps 3
 	spacing_to_other_terrain_types 0
 }
 
@@ -186,6 +203,23 @@ create_object STONE
   min_distance_to_players    18
   max_distance_to_players    28
   temp_min_distance_group_placement  5
+}
+
+
+create_object GOLD
+{
+  number_of_objects         3
+  if TINY_MAP
+    number_of_groups          2
+  elseif SMALL_MAP
+    number_of_groups          3
+  else
+    number_of_groups          4
+  endif
+  group_placement_radius 1
+  set_tight_grouping
+  set_gaia_object_only
+  terrain_to_place_on NEUTRAL_LAND
 }
 
 create_object RELIC
