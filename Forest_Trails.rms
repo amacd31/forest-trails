@@ -4,20 +4,35 @@ Website: https://github.com/amacd31/forest-trails
 Source: https://github.com/amacd31/forest-trails/Forest_trails.rms
 */
 
-#const LAND_INTERMEDIATE 32
 start_random
-  percent_chance 50
+  percent_chance 25
     #define JUNGLE_MAP
   percent_chance 50
     #define FOREST_MAP
+  percent_chance 25
+    #define SNOW_FOREST_MAP
 end_random
 
 if JUNGLE_MAP
     #const WOODIES 17
     #const LAND_BASE 60
+    #const NEUTRAL_LAND 12
+    #const LAND_INTERMEDIATE 32
 elseif FOREST_MAP
     #const WOODIES 19
     #const LAND_BASE 0
+    #const NEUTRAL_LAND 12
+    #const LAND_INTERMEDIATE 32
+elseif SNOW_FOREST_MAP
+    #const WOODIES 21
+    #const LAND_BASE 32
+    #const NEUTRAL_LAND 33
+    #const LAND_INTERMEDIATE 0
+else
+    #const WOODIES 19
+    #const LAND_BASE 0
+    #const NEUTRAL_LAND 12
+    #const LAND_INTERMEDIATE 32
 endif
 
 <PLAYER_SETUP>
