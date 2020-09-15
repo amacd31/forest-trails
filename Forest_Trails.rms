@@ -67,9 +67,11 @@ create_land
 <ELEVATION_GENERATION>
 
 create_elevation 6 {
-  number_of_clumps 128
-  number_of_tiles 256
+  base_terrain LAND_BASE
+  number_of_clumps 10
+  number_of_tiles 1000
   set_scale_by_size
+  set_scale_by_groups
 }
 
 
