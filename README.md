@@ -22,3 +22,8 @@ title, selecting Properties, going to the `LOCAL FILES` tab, then choosing
 `BROWSE LOCAL FILES...`.
 
 From there the directory is `resources/_common/random-map-scripts/`.
+
+When playing it is recommended to pick a map size up from what you would
+normally use for games with more than two players. e.g. for a 3 player choose
+Medium (4 player) or an 8 player game choose Giant. Two player matches can
+still be played on Tiny (2 player).
