@@ -5,7 +5,7 @@ The map is somewhere between Black Forest and Forest Nothing.
 
 Each player starts with:
 
-  * A main gold and stone in their base with a secondary gold and stone nearby.
+  * A main gold and stone in their base with two secondary golds and stones nearby.
   * 6 berry bushes
   * 4 main sheep
   * 2 groups of 2 sheep nearby
